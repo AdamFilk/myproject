@@ -79,7 +79,7 @@ export const Tabs = ({
                   duration: 0.6,
                 }}
                 className={cn(
-                  'absolute inset-0 rounded-full bg-gray-200 dark:bg-zinc-800 ',
+                  'absolute inset-0 flex h-10 items-center justify-center rounded-full bg-gray-200 dark:bg-zinc-800',
                   activeTabClassName
                 )}
               />
