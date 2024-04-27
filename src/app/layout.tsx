@@ -4,6 +4,7 @@ import './globals.css';
 import { inter } from '@/libs/configs/fonts';
 import Navbar from '@/components/Navbar/Navbar';
 import SocialLinks from '@/components/SocialLinks/SocialLinks';
+import Footer from '@/components/Footer/Footer';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -17,10 +18,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={inter.className}>
+      <body className={`${inter.className} bg-black text-white`}>
         <Navbar />
         <SocialLinks />
         {children}
+        <Footer />
       </body>
     </html>
   );

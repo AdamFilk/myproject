@@ -2,7 +2,7 @@ import { SocialIcon } from 'react-social-icons';
 
 export default function SocialLinks() {
   return (
-    <div className="fixed right-3 top-0 z-10 flex h-screen items-center">
+    <div className="fixed right-3 top-0 z-30 hidden h-screen items-center md:flex">
       <div className="glassBg flex flex-col items-center justify-center gap-4 rounded-full p-2">
         <SocialIcon
           url="https://twitter.com/danielfaux0308"
