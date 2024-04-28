@@ -9,7 +9,8 @@ import {
 } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import Image from 'next/image';
-import React from 'react';
+import React, { useRef } from 'react';
+import { useScroll } from '@/libs/providers/scroll-context-provider';
 
 const experiences = [
   {
@@ -39,8 +40,12 @@ const experiences = [
 ];
 
 export default function WorkExperience() {
+  const { workSectionRef } = useScroll();
   return (
-    <section className="b my-20 flex flex-col items-center justify-center">
+    <section
+      className="b my-20 flex flex-col items-center justify-center"
+      ref={workSectionRef}
+    >
       <h1 className="mt-5 max-w-4xl text-center text-2xl font-bold leading-relaxed text-neutral-700 dark:text-white sm:text-left md:text-4xl lg:text-5xl lg:leading-snug">
         Career
       </h1>

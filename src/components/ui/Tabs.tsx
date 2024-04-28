@@ -16,6 +16,7 @@ const variants = {
 
 export const Tabs = ({
   tabs: propTabs,
+  onClick,
   containerClassName,
   activeTabClassName,
   activeTabLabelClassName,
@@ -23,6 +24,7 @@ export const Tabs = ({
   tabLabelClassName,
 }: {
   tabs: Tab[];
+  onClick: (value: string) => void;
   containerClassName?: string;
   activeTabClassName?: string;
   activeTabLabelClassName?: string;
@@ -31,15 +33,11 @@ export const Tabs = ({
   contentClassName?: string;
 }) => {
   const [active, setActive] = useState<Tab>(propTabs[0]);
-  const [tabs, setTabs] = useState<Tab[]>(propTabs);
-  const [isAnimating, setIsAnimating] = useState(true);
-
-  const moveSelectedTabToTop = (idx: number) => {
+  const handleOnClickTab = (value: string, idx: number) => {
+    onClick(value);
     const newTabs = [...propTabs];
     const selectedTab = newTabs.splice(idx, 1);
-    newTabs.unshift(selectedTab[0]);
-    setTabs(newTabs);
-    setActive(newTabs[0]);
+    setActive(selectedTab[0]);
   };
 
   const [hovering, setHovering] = useState(false);
@@ -47,7 +45,6 @@ export const Tabs = ({
   return (
     <motion.div
       animate="open"
-      onAnimationComplete={() => setIsAnimating(false)}
       transition={{ ease: 'easeOut', duration: 1 }}
       initial="closed"
       variants={variants}
@@ -60,7 +57,7 @@ export const Tabs = ({
         <button
           key={tab.title}
           onClick={() => {
-            moveSelectedTabToTop(idx);
+            handleOnClickTab(tab.value, idx);
           }}
           onMouseEnter={() => setHovering(true)}
           onMouseLeave={() => setHovering(false)}

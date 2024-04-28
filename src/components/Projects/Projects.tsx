@@ -1,8 +1,13 @@
 import { Card, CardDescription, CardImage, CardTitle } from '../ui/Card/Card';
+import tharapaImg from '@/assets/images/tharapa.png';
+import livechatImg from '@/assets/images/livechat.png';
+import dslaPosImg from '@/assets/images/dsla.png';
+import gamespaceImg from '@/assets/images/gamespace.png';
+import freshmoeImg from '@/assets/images/freshmoe.png';
 
 const projects = [
   {
-    coverImage: '',
+    coverImage: freshmoeImg,
     title: 'Fresh Moe',
     description:
       'Fresh Moe was a start up company that aims to revolutionize fresh fruits and vegetable industry on a large scale. I wrote Backend services for E-Commerce, Delivery, Inventory, Stock applications for flutter app. E-Commerce web apps and business landing pages.',
@@ -10,15 +15,7 @@ const projects = [
     tools: ['Laravel', 'PHP', 'Vue'],
   },
   {
-    coverImage: '',
-    title: 'Lewre Bespoke',
-    description:
-      'Lewre is a well known shoe company based in Malaysia. Took part in frontend, UI development for their new E-commerce web application',
-    link: '',
-    tools: ['React', 'MUI'],
-  },
-  {
-    coverImage: '',
+    coverImage: tharapaImg,
     title: 'Tharapa',
     description:
       'Tharapa is a online shopping website and chatbot solution for social media platforms and others. I maintined already existing features on the project and added new features as per client requests and enhancements.',
@@ -26,7 +23,7 @@ const projects = [
     tools: ['Laravel', 'PHP', 'Vue', 'Vuetify', 'Nodejs'],
   },
   {
-    coverImage: '',
+    coverImage: livechatImg,
     title: 'Livechat',
     description:
       'Livechat is a chat solution that combines most of the popular messaging tools like messenger, viber and telegram. I maintined already existing features on the project and added new features as per client requests and enhancements.',
@@ -34,14 +31,7 @@ const projects = [
     tools: ['Laravel', 'PHP', 'Vue', 'Vuetify', 'Nodejs'],
   },
   {
-    title: 'Burmese to English name translation',
-    description:
-      'This project is for translating names that are in burmese to english name for banks. I developed this project form scratch. I developed admin interface to add words for translation and to submit csv files to accept millions of name data. Then I wrote a backend service to translate those name.',
-    link: '',
-    tools: ['Laravel', 'PHP', 'Vue', 'Vuetify'],
-  },
-  {
-    coverImage: '',
+    coverImage: dslaPosImg,
     title: 'DSLA POS',
     description:
       'DSLA POS is an all-in-one solution that involves, analytics, recommendations, e-commerce and POS. I developed backend services and frontend web and android solutions for backoffice and POS app.',
@@ -49,12 +39,19 @@ const projects = [
     tools: ['Nest', 'Node', 'React', 'React Native', 'Laravel', 'PHP'],
   },
   {
-    coverImage: '',
+    coverImage: gamespaceImg,
     title: 'DSLA Gamespace',
     description:
       'DSLA Gamespace is a platform as a service where clients can integrate gamespace SDK or backend into their exsiting apps. I developed admin panel for managing games, platforms, users and gamification elements such as ads, rewards and progression ladder and React Native SDK to integrate on other apps',
     link: '',
     tools: ['Nest', 'Node', 'React', 'React Native'],
+  },
+  {
+    title: 'Burmese to English name translation',
+    description:
+      'This project is for translating names that are in burmese to english name for banks. I developed this project form scratch. I developed admin interface to add words for translation and to submit csv files to accept millions of name data. Then I wrote a backend service to translate those name.',
+    link: '',
+    tools: ['Laravel', 'PHP', 'Vue', 'Vuetify'],
   },
 ];
 

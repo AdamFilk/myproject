@@ -7,10 +7,14 @@ import Highlight from '../ui/HeroHightlight/Highlight';
 import ProfileAvatar from '../ui/ProfileAvatar';
 import { motion } from 'framer-motion';
 import { LuChevronDown } from 'react-icons/lu';
+import { useScroll } from '@/libs/providers/scroll-context-provider';
+import { useEffect } from 'react';
 
 export default function Hero() {
+  const { aboutSectionRef, scrollToSection, contactSectionRef } = useScroll();
+
   return (
-    <section className="relative h-screen w-full">
+    <section className="relative h-screen w-full" ref={aboutSectionRef}>
       <HeroHighlight
         containerClassName="h-full w-full"
         className="h-full w-full"
@@ -58,7 +62,13 @@ export default function Hero() {
               className="transition-color h-10 w-10 rounded-full bg-red-500 duration-150 hover:bg-black"
             />
           </div>
-          <Button onClick={() => {}} label="Contact" className="mt-4" />
+          <Button
+            onClick={() => {
+              scrollToSection(contactSectionRef);
+            }}
+            label="Contact"
+            className="mt-4"
+          />
         </motion.div>
       </HeroHighlight>
       <motion.div
