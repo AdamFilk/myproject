@@ -61,7 +61,7 @@ export const CardImage = ({
   image: StaticImageData | string;
 }) => {
   return (
-    <div className={cn('h-[150px] w-full', className)}>
+    <div className={cn('h-auto w-full', className)}>
       <Image
         alt="image"
         src={image}
